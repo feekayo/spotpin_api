@@ -12,24 +12,24 @@ module.exports = function(app){
     //accounts routes **tested and working
     router.get('/',accounts.index);//hello message
     router.get('/user/login',accounts.login);//login route 
-    router.put('/user/register',accounts.signup); //register route
-    router.post('/user/forgot_password',accounts.forgot_password); //forgot password route
-    router.post('/user/update/account/:session_id',accounts.update_account); //update account route
+    router.post('/user/register',accounts.signup); //register route
+    router.put('/user/forgot_password',accounts.forgot_password); //forgot password route
+    router.put('/user/update/account/:session_id',accounts.update_account); //update account route
     //router.post('/user/update/password/:uniq_key',accounts.update_password);//update password route
     router.get('/user/confirm/:uniq_key',accounts.confirm_account);//confrim account
     router.delete('/user/signout/:session_id',accounts.signout); //signout route
     
     //create routes
-    router.put('/create/story/:session_id',create.story); //create story route
-    router.put('/create/pin/:session_id',create.pin); //create pin route
-    router.put('/create/capsule/:session_id',create.capsule); //create capsule route **works
-    router.put('/create/capsule_invites/:session_id',create.capsule_members); //create capsule invites route
-    router.put('/create/leaderboard/:session_id',create.leaderboard); //create leaderboard route **works
-    router.put('/create/leaderboard_invites/:session_id',create.leaderboard_members); //create leaderboard invites route
-    router.put('/create/favorite/:session_id',create.favorite);//create favorite route
-    router.put('/create/dislike/:session_id',create.dislike);//create dislike route
-    router.put('/create/pinpal/:session_id',create.pinpal);//create pinpal request route
-    router.put('/create/watchlist_item/:session_id',create.watchlist_item);//create pinpal request route
+    router.post('/create/story/:session_id',create.story); //create story route
+    router.post('/create/pin/:session_id',create.pin); //create pin route
+    router.post('/create/capsule/:session_id',create.capsule); //create capsule route **works
+    router.post('/create/capsule_invites/:session_id',create.capsule_members); //create capsule invites route
+    router.post('/create/leaderboard/:session_id',create.leaderboard); //create leaderboard route **works
+    router.post('/create/leaderboard_invites/:session_id',create.leaderboard_members); //create leaderboard invites route
+    router.post('/create/favorite/:session_id',create.favorite);//create favorite route
+    router.post('/create/dislike/:session_id',create.dislike);//create dislike route
+    router.post('/create/pinpal/:session_id',create.pinpal);//create pinpal request route
+    router.post('/create/watchlist_item/:session_id',create.watchlist_item);//create pinpal request route
     //router.put('/create/event/:session_id',create.event);//create event route
  
     //read routes
@@ -57,15 +57,15 @@ module.exports = function(app){
     
     
     //update routes
-    router.post('/update/capsule/:session_id',update.capsule); //route  to update time capsule details
-    router.post('/update/pinpal/:session_id',update.pinpal); //route to update pinpal status
-    router.post('/update/leaderboard/:session_id',update.leaderboard); //route to update leaderboard details
-    //router.post('/update/leaderboard_admin/:session_id',update.leaderboard_admin); //route to update leaderboard admin details
-    router.post('/update/leaderboard_invite/:session_id',update.leaderboard_invite); //route to update leaderboard invite status
-    router.post('/update/capsule_invite/:session_id',update.capsule_invite); //route to update capsule invite status
-    router.post('/update/lock_capsule/:session_id',update.lock_capsule); //route to update capsule invite status
-    //router.post('/update/close_event/:session_id',update.close_event);//close event
-    //router.post('/update/update_event/:session_id',update.update_event);//update event
+    router.put('/update/capsule/:session_id',update.capsule); //route  to update time capsule details
+    router.put('/update/pinpal/:session_id',update.pinpal); //route to update pinpal status
+    router.put('/update/leaderboard/:session_id',update.leaderboard); //route to update leaderboard details
+    //router.put('/update/leaderboard_admin/:session_id',update.leaderboard_admin); //route to update leaderboard admin details
+    router.put('/update/leaderboard_invite/:session_id',update.leaderboard_invite); //route to update leaderboard invite status
+    router.put('/update/capsule_invite/:session_id',update.capsule_invite); //route to update capsule invite status
+    router.put('/update/lock_capsule/:session_id',update.lock_capsule); //route to update capsule invite status
+    //router.put('/update/close_event/:session_id',update.close_event);//close event
+    //router.put('/update/update_event/:session_id',update.update_event);//update event
     
     
     //delete routes
